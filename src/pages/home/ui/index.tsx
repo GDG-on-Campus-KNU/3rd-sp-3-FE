@@ -1,14 +1,24 @@
-import { HomePageLayout, Channel, Menu, CollabSpace, ChatRoom } from "./styles";
+import * as Styles from "./styles";
+import "@blocknote/core/fonts/inter.css";
+import { BlockNoteView, useCreateBlockNote } from "@blocknote/react";
+import "@blocknote/react/style.css";
 
-export const HomePage = () => {
+export const HomePage: React.FC = () => {
+  const editor = useCreateBlockNote();
+
   return (
     <>
-      <HomePageLayout>
-        <Channel>Channel Section</Channel>
-        <Menu>Menu Section</Menu>
-        <CollabSpace>CollabSpace Section</CollabSpace>
-        <ChatRoom>ChatRoom Section</ChatRoom>
-      </HomePageLayout>
+      <Styles.HomePageLayout>
+        <Styles.Channel>Channel Section</Styles.Channel>
+        <Styles.Menu>Menu Section</Styles.Menu>
+        <Styles.CollabSpace>
+          <Styles.BlockNoteWrapper>
+            <Styles.BlockNoteStyles />
+            <BlockNoteView editor={editor} />
+          </Styles.BlockNoteWrapper>
+        </Styles.CollabSpace>
+        <Styles.ChatRoom>ChatRoom Section</Styles.ChatRoom>
+      </Styles.HomePageLayout>
     </>
   );
 };
