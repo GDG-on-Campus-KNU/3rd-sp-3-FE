@@ -1,4 +1,19 @@
-import styled from "styled-components";
+import styled, { createGlobalStyle } from "styled-components";
+
+export const BlockNoteStyles = createGlobalStyle`
+  .bn-container, .bn-editor {
+    height: 100%;
+  }
+
+  .bn-editor { 
+    padding-top: 1rem;
+  }
+`;
+
+export const BlockNoteWrapper = styled.div`
+  width: 100%;
+  height: 100%;
+`;
 
 export const Section = styled.section`
   border: 1px solid #ddd;
@@ -19,7 +34,7 @@ export const HomePageLayout = styled.div`
   grid-template-areas:
     "channel menu menu menu"
     "channel collabSpace collabSpace chatRoom";
-  grid-template-columns: 240px auto;
+  grid-template-columns: 300px minmax(auto, 1fr) 0px 300px;
   grid-template-rows: auto 1fr;
   gap: 8px;
   height: 100vh;
