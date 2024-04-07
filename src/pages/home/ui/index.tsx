@@ -1,7 +1,14 @@
+import { HomePageLayout, Channel, Menu, CollabSpace, ChatRoom } from "./styles";
+
 export const HomePage = () => {
   return (
     <>
-      <h1>Hello FSD!</h1>
+      <HomePageLayout>
+        <Channel>Channel Section</Channel>
+        <Menu>Menu Section</Menu>
+        <CollabSpace>CollabSpace Section</CollabSpace>
+        <ChatRoom>ChatRoom Section</ChatRoom>
+      </HomePageLayout>
     </>
   );
-}
+};
