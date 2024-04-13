@@ -11,6 +11,15 @@ dependencies:
   '@blocknote/react':
     specifier: ^0.12.4
     version: 0.12.4(@tiptap/pm@2.2.6)(@types/react@18.2.74)(react-dom@18.2.0)(react@18.2.0)
+  '@liveblocks/client':
+    specifier: ^1.11.1
+    version: 1.11.1
+  '@liveblocks/react':
+    specifier: ^1.11.1
+    version: 1.11.1(react@18.2.0)
+  '@liveblocks/yjs':
+    specifier: ^1.11.1
+    version: 1.11.1(yjs@13.6.14)
   '@tanstack/react-query':
     specifier: ^5.29.0
     version: 5.29.0(react@18.2.0)
@@ -453,6 +462,39 @@ packages:
   /@humanwhocodes/object-schema@2.0.3:
     resolution: {integrity: sha512-93zYdMES/c1D69yZiKDBj0V24vqNzB/koF26KPaagAfd3P/4gUlh3Dys5ogAK+Exi9QyzlD8x/08Zt7wIKcDcA==}
     dev: true
+
+  /@liveblocks/client@1.11.1:
+    resolution: {integrity: sha512-+94LplyUElOZpKECX/rF1UJmkU9WRj3S1aD9w6iOYIitT1RFW+9Z4Et7nxO43FUODaheR1a40iqyikfDcRXswA==}
+    dependencies:
+      '@liveblocks/core': 1.11.1
+    dev: false
+
+  /@liveblocks/core@1.11.1:
+    resolution: {integrity: sha512-QkrONvIkVBGqZynrgGTF4jI4oFcui4+0Vf8QYdvvdtqXG6t6mcryDic1Rq53tuKsPzOXP1Nb7XSW3LH1z8ERxQ==}
+    dev: false
+
+  /@liveblocks/react@1.11.1(react@18.2.0):
+    resolution: {integrity: sha512-8ut0ONis8XOZEkNoVMZ1zOs34jja1aciPBBrqeV+KQYTYjgbcKXdpc2QyRIl3E6FOTPq2lgf0mpDQMtTU0n2eQ==}
+    peerDependencies:
+      react: ^16.14.0 || ^17 || ^18
+    dependencies:
+      '@liveblocks/client': 1.11.1
+      '@liveblocks/core': 1.11.1
+      nanoid: 3.3.7
+      react: 18.2.0
+      use-sync-external-store: 1.2.0(react@18.2.0)
+    dev: false
+
+  /@liveblocks/yjs@1.11.1(yjs@13.6.14):
+    resolution: {integrity: sha512-mcPWIFw2SSbOupfZVKqv8pypFvFDZwrzbbwrgFQu1vDsBjPuy+Xk92spLQqfKEi0SY2Mz0dt9pjIFHzlqef3mw==}
+    peerDependencies:
+      yjs: ^13.6.1
+    dependencies:
+      '@liveblocks/client': 1.11.1
+      '@liveblocks/core': 1.11.1
+      js-base64: 3.7.7
+      yjs: 13.6.14
+    dev: false
 
   /@mantine/core@7.7.1(@mantine/hooks@7.7.1)(@types/react@18.2.74)(react-dom@18.2.0)(react@18.2.0):
     resolution: {integrity: sha512-SdPzjvqvEK7uHFuVD3a8w3OZyQVoCwIXLSUfOtRNouDMQgsq6Ac7QjKXBBOk3wNweOWFVOU1vATLHobSmow0lQ==}
@@ -2025,6 +2067,10 @@ packages:
 
   /isomorphic.js@0.2.5:
     resolution: {integrity: sha512-PIeMbHqMt4DnUP3MA/Flc0HElYjMXArsw1qwJZcm9sqR8mq3l8NYizFMty0pWwE/tzIGH3EKK5+jes5mAr85yw==}
+    dev: false
+
+  /js-base64@3.7.7:
+    resolution: {integrity: sha512-7rCnleh0z2CkXhH67J8K1Ytz0b2Y+yxTPL+/KOJoa20hfnVQ/3/T6W/KflYI4bRHRagNeXeU2bkNGI3v1oS/lw==}
     dev: false
 
   /js-tokens@4.0.0:
