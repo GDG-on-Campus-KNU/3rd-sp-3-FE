@@ -1,6 +1,6 @@
 ---
 name: Issue request
-about: "\b이슈 추가 Template"
+about: '이슈 추가 Template'
 title: ''
 labels: ''
 assignees: ''
