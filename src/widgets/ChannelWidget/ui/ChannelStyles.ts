@@ -19,12 +19,12 @@ export const ChannelPickerContainer = styled.div`
 
 export const MainContentContainer = styled.div`
   grid-column: 2;
+  width: 240px;
   display: flex;
   flex-direction: column;
   background: #f2f3f5;
   border-radius: 0 8px 8px 0;
   padding: 10px;
-  width: 190px;
 `;
 
 export const Heading = styled.h1`
@@ -43,4 +43,30 @@ export const ListItem = styled.li`
   &:last-child {
     border-bottom: none;
   }
+`;
+
+export const ChannelLabel = styled.h3`
+  margin: 0;
+  color: #888;
+  font-size: 14px;
+  font-weight: normal;
+  text-transform: uppercase;
+`;
+
+export const MemberCount = styled.p`
+  margin: 5px 0 0 0;
+  color: #888;
+  font-size: 14px;
+`;
+
+export const ChannelInfoContainer = styled.div`
+  padding: 15px;
+  border-bottom: 1px solid #eee;
+  text-align: left;
+`;
+
+export const ChannelName = styled.h2`
+  margin: 0 0 10px 0;
+  color: #333;
+  font-size: 24px;
 `;
