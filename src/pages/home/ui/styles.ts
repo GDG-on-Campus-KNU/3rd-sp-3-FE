@@ -33,7 +33,7 @@ export const HomePageLayout = styled.div`
   grid-template-areas:
     "channel menu menu menu"
     "channel collabSpace collabSpace chatRoom";
-  grid-template-columns: 300px minmax(auto, 1fr) 0px 300px;
+  grid-template-columns: 350px minmax(auto, 1fr) 0px 350px;
   grid-template-rows: auto 1fr;
   gap: 8px;
   height: 100vh;
