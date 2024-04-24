@@ -15,13 +15,13 @@ export const ChannelLabel = styled.h3`
 `;
 
 export const MemberCount = styled.p`
-  margin: 5px 0 0 0;
+  margin: 0;
   color: #888;
   font-size: 14px;
 `;
 
 export const ChannelName = styled.h2`
-  margin: 0 0 10px 0;
+  margin-bottom: 5px;
   color: #333;
   font-size: 24px;
 `;
