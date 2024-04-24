@@ -1,10 +1,30 @@
 import styled from "styled-components";
 
 export const ChannelContainer = styled.div`
-  padding: 20px;
+  display: grid;
+  grid-template-columns: auto 1fr;
+  height: 100%;
   background: #f9f9f9;
   border-radius: 8px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+`;
+
+export const ChannelPickerContainer = styled.div`
+  grid-column: 1;
+  width: 40px;
+  background: #e3e5e8;
+  border-radius: 8px 0 0 8px;
+  padding: 15px;
+`;
+
+export const MainContentContainer = styled.div`
+  grid-column: 2;
+  display: flex;
+  flex-direction: column;
+  background: #f2f3f5;
+  border-radius: 0 8px 8px 0;
+  padding: 10px;
+  width: 190px;
 `;
 
 export const Heading = styled.h1`
