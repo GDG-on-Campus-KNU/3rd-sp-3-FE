@@ -21,6 +21,8 @@ export interface Channel {
 
 export interface ChannelState {
   currentChannel: Channel | null;
-  setCurrentChannel: (channel: Channel) => void;
+  channels: Channel[];
+  setCurrentChannel: (channel: Channel | null) => void;
+  setChannels: (channels: Channel[]) => void;
   sendMessage: (chatRoomId: string, message: ChatMessage) => void;
 }
