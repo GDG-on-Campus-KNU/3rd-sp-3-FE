@@ -8,24 +8,6 @@ export const MicrophoneIcon = styled.img`
   filter: grayscale(100%);
 `;
 
-export const MemberListContainer = styled.div`
-  padding: 15px;
-  border-bottom: 1px solid #b4b4b4;
-`;
-
-export const MemberListItem = styled.div`
-  display: flex;
-  align-items: center;
-  padding-top: 5px;
-  padding-bottom: 5px;
-  border-radius: 4px;
-  margin-bottom: 8px;
-  cursor: pointer;
-  &:hover {
-    background: #f5f5f5;
-  }
-`;
-
 export const Avatar = styled.div`
   width: 30px;
   height: 30px;
@@ -44,15 +26,4 @@ export const StatusIndicator = styled.span`
   right: -2px;
   bottom: -2px;
   border: 2px solid #fff;
-`;
-
-export const MemberName = styled.span`
-  font-size: 14px;
-  color: #333;
-`;
-
-export const HeaderContainer = styled.div`
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
 `;
