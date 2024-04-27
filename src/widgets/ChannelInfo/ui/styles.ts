@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 export const ChannelInfoContainer = styled.div`
   padding: 15px;
-  border-bottom: 1px solid #eee;
+  border-bottom: 1px solid #b4b4b4;
   text-align: left;
 `;
 
