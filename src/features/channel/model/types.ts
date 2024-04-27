@@ -13,10 +13,11 @@ export interface ChatRoom {
 export interface Channel {
   id: string;
   name: string;
-  members: string[];
-  documents: string[];
-  chatRooms: ChatRoom[];
-  voiceChatParticipants: string[];
+  description?: string;
+  members: Member[];
+  // documents: string[];
+  // chatRooms: ChatRoom[];
+  // voiceChatParticipants: string[];
 }
 
 export interface ChannelState {
@@ -25,4 +26,9 @@ export interface ChannelState {
   setCurrentChannel: (channel: Channel | null) => void;
   setChannels: (channels: Channel[]) => void;
   sendMessage: (chatRoomId: string, message: ChatMessage) => void;
+}
+
+export interface Member {
+  name: string;
+  microphoneStatus: "on" | "off";
 }
