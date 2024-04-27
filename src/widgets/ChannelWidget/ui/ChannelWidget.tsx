@@ -1,8 +1,8 @@
 import { ChannelPicker } from "@/widgets/ChannelPicker";
-import { MemberList } from "@/widgets/MemberList";
-import { DocumentList } from "@/widgets/DocumentList";
-import { ChatroomList } from "@/widgets/ChatroomList";
-import { VoiceroomList } from "@/widgets/VoiceroomList";
+import { MemberList } from "./MemberList";
+import { DocumentList } from "./DocumentList";
+import { ChatroomList } from "./ChatroomList";
+import { VoiceroomList } from "./VoiceroomList";
 import { ChannelInfo } from "@/widgets/ChannelInfo";
 import {
   ChannelContainer,
