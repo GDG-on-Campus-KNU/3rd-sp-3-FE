@@ -19,12 +19,12 @@ export const ChannelPickerContainer = styled.div`
 
 export const MainContentContainer = styled.div`
   grid-column: 2;
-  width: 240px;
+  width: 220px;
   display: flex;
   flex-direction: column;
   background: #f2f3f5;
   border-radius: 0 8px 8px 0;
-  padding: 10px;
+  padding: 20px;
 `;
 
 export const Heading = styled.h1`

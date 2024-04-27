@@ -7,12 +7,19 @@ export const ChannelPicker: React.FC = () => {
     setCurrentChannel: state.setCurrentChannel,
   }));
 
+  const handleChannelSelect = (channelId: string) => {
+    const channel = channels.find((ch) => ch.id === channelId);
+    if (channel) {
+      setCurrentChannel(channel);
+    }
+  };
+
   return (
     <>
       {channels.map((channel) => (
         <ChannelIcon
           key={channel.id}
-          onClick={() => setCurrentChannel(channel)}
+          onClick={() => handleChannelSelect(channel.id)}
         >
           {channel.name[0]}
         </ChannelIcon>
