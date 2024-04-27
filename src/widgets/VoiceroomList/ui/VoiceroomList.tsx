@@ -1,14 +1,6 @@
 import useStore from "@/features/channel/model/store";
 import { ItemList } from "@/shared/ui/ItemList/ItemList";
-import VoiceIcon from "@/assets/voice.png";
-
-const renderVoiceRoomIcon = () => (
-  <img
-    src={VoiceIcon}
-    alt="Voice Room"
-    style={{ width: "24px", height: "24px", marginRight: "10px" }}
-  />
-);
+import { VoiceIcon } from "@/shared/assets/icons/StyledIcon";
 
 export const VoiceroomList: React.FC = () => {
   const { currentChannel } = useStore((state) => ({
@@ -24,7 +16,7 @@ export const VoiceroomList: React.FC = () => {
           name: room.name,
         })) || []
       }
-      renderIconBefore={renderVoiceRoomIcon}
+      renderIconBefore={() => <VoiceIcon />}
     />
   );
 };

@@ -1,14 +1,6 @@
 import useStore from "@/features/channel/model/store";
 import { ItemList } from "@/shared/ui/ItemList/ItemList";
-import ChatBubbleIcon from "@/assets/chat.png";
-
-const renderChatroomIcon = () => (
-  <img
-    src={ChatBubbleIcon}
-    alt="Chat Room"
-    style={{ width: "24px", height: "24px", marginRight: "10px" }}
-  />
-);
+import { ChatBubbleIcon } from "@/shared/assets/icons/StyledIcon";
 
 export const ChatroomList: React.FC = () => {
   const { currentChannel } = useStore((state) => ({
@@ -24,7 +16,7 @@ export const ChatroomList: React.FC = () => {
           name: room.name,
         })) || []
       }
-      renderIconBefore={renderChatroomIcon}
+      renderIconBefore={() => <ChatBubbleIcon />}
     />
   );
 };

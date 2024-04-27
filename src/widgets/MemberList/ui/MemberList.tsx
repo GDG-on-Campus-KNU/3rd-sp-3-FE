@@ -1,9 +1,8 @@
 import useStore from "@/features/channel/model/store";
-import MicOnIcon from "@/assets/mic.png";
-import MicOffIcon from "@/assets/mute.png";
 import { ItemList } from "@/shared/ui/ItemList/ItemList";
-import { Avatar, StatusIndicator, MicrophoneIcon } from "./styles";
+import { Avatar, StatusIndicator } from "./styles";
 import { Item, Member } from "@/features/channel/model/types";
+import { MicOnIcon, MicOffIcon } from "@/shared/assets/icons/StyledIcon";
 
 export const MemberList: React.FC = () => {
   const { currentChannel } = useStore((state) => ({
@@ -16,14 +15,8 @@ export const MemberList: React.FC = () => {
     </Avatar>
   );
 
-  const renderMicrophoneIcon = (member: Member) => (
-    <MicrophoneIcon
-      src={member.microphoneStatus === "on" ? MicOnIcon : MicOffIcon}
-      alt={
-        member.microphoneStatus === "on" ? "Microphone On" : "Microphone Off"
-      }
-    />
-  );
+  const renderMicrophoneIcon = (member: Member) =>
+    member.microphoneStatus === "on" ? <MicOnIcon /> : <MicOffIcon />;
 
   return (
     <ItemList
