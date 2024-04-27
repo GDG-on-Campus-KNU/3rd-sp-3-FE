@@ -1,9 +1,9 @@
-import { ChannelPicker } from "@/widgets/ChannelPicker";
+import { ChannelPicker } from "@/widgets/ChannelSpace/ChannelPicker";
 import { MemberList } from "./MemberList";
 import { DocumentList } from "./DocumentList";
 import { ChatroomList } from "./ChatroomList";
 import { VoiceroomList } from "./VoiceroomList";
-import { ChannelInfo } from "@/widgets/ChannelInfo";
+import { ChannelInfo } from "@/widgets/ChannelSpace/ChannelInfo";
 import {
   ChannelContainer,
   ChannelPickerContainer,

@@ -1,5 +1,5 @@
 import * as Styles from "./styles";
-import { ChannelWidget } from "@/widgets/ChannelWidget";
+import { ChannelWidget } from "@/widgets/ChannelSpace/ChannelWidget";
 import { CollabSpace } from "@/widgets/CollabSpace";
 
 export const HomePage: React.FC = () => {
