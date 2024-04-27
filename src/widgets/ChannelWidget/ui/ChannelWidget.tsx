@@ -22,11 +22,15 @@ export const ChannelWidget: React.FC = () => {
         <ChannelPicker />
       </ChannelPickerContainer>
       <MainContentContainer>
-        {currentChannel && <ChannelInfo />}
-        <MemberList />
-        <DocumentList />
-        <ChatroomList />
-        <VoiceroomList />
+        {currentChannel && (
+          <>
+            <ChannelInfo />
+            <MemberList />
+            <DocumentList />
+            <ChatroomList />
+            <VoiceroomList />
+          </>
+        )}
       </MainContentContainer>
     </ChannelContainer>
   );
