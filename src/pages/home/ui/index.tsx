@@ -1,11 +1,14 @@
 import * as Styles from "./styles";
+import { ChannelWidget } from "@/widgets/ChannelSpace/ChannelWidget";
 import { CollabSpace } from "@/widgets/CollabSpace";
 
 export const HomePage: React.FC = () => {
   return (
     <>
       <Styles.HomePageLayout>
-        <Styles.Channel>Channel Section</Styles.Channel>
+        <Styles.Channel>
+          <ChannelWidget />
+        </Styles.Channel>
         <Styles.Menu>Menu Section</Styles.Menu>
         <Styles.CollabSpace>
           <CollabSpace />

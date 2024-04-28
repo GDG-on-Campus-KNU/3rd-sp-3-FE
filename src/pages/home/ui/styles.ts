@@ -18,7 +18,6 @@ export const BlockNoteWrapper = styled.div`
 export const Section = styled.section`
   border: 1px solid #ddd;
   border-radius: 4px;
-  padding: 16px;
   margin: 8px;
   display: flex;
   flex-direction: column;
@@ -34,7 +33,7 @@ export const HomePageLayout = styled.div`
   grid-template-areas:
     "channel menu menu menu"
     "channel collabSpace collabSpace chatRoom";
-  grid-template-columns: 300px minmax(auto, 1fr) 0px 300px;
+  grid-template-columns: 350px minmax(auto, 1fr) 0px 350px;
   grid-template-rows: auto 1fr;
   gap: 8px;
   height: 100vh;
@@ -48,12 +47,15 @@ export const Channel = styled(Section)`
 
 export const Menu = styled(Section)`
   grid-area: menu;
+  padding: 16px;
 `;
 
 export const CollabSpace = styled(Section)`
   grid-area: collabSpace;
+  padding: 16px;
 `;
 
 export const ChatRoom = styled(Section)`
   grid-area: chatRoom;
+  padding: 16px;
 `;
