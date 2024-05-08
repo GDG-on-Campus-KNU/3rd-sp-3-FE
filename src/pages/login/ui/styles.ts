@@ -1,15 +1,9 @@
-import styled, { createGlobalStyle } from 'styled-components';
+// import styled, { createGlobalStyle } from 'styled-components';
+import styled from 'styled-components';
 import GoogleLogo from '../../../assets/Google-Logo.svg';
 
-export const GlobalStyle = createGlobalStyle`
-    body{
-        padding: 0;
-        margin: 0;
-    }
-`;
-export const LoginPageLayout = styled.body`
+export const LoginPageLayout = styled.div`
 	background-color: #c0e7df;
-	/* padding: 20px; */
 	width: 100vw;
 	height: 100vh;
 `;
@@ -20,9 +14,6 @@ export const LoginSection = styled.section`
 	justify-content: center;
 	align-items: center;
 	height: 40rem;
-	/* width: 20rem; */
-
-	/* background-color: #fcfcfc; */
 `;
 
 export const LoginText = styled.div`
@@ -38,7 +29,6 @@ export const LoginText = styled.div`
 `;
 
 export const LoginInnerText = styled.div`
-	/* color: #63aea0; */
 	font-size: 2rem;
 	font-weight: 700;
 	margin-top: 0.5rem;
