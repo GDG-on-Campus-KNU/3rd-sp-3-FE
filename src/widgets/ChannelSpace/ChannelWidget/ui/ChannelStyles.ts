@@ -19,7 +19,7 @@ export const ChannelPickerContainer = styled.div`
 
 export const MainContentContainer = styled.div`
   grid-column: 2;
-  width: 220px;
+  width: 320px;
   display: flex;
   flex-direction: column;
   background: #f2f3f5;
