@@ -6,8 +6,14 @@ import {
   UserInfo,
   Avatar,
   StatusIndicator,
+  MessageTime,
 } from "./styles";
 import { MessageListProps } from "@/features/chatroom/model/types";
+
+const formatTimestamp = (timestamp: Date) => {
+  const date = new Date(timestamp);
+  return date.toLocaleTimeString([], { hour: "2-digit", minute: "2-digit" });
+};
 
 const MessageList: React.FC<MessageListProps> = ({ messages, currentUser }) => {
   const messageListRef = useRef<HTMLDivElement | null>(null);
@@ -31,6 +37,7 @@ const MessageList: React.FC<MessageListProps> = ({ messages, currentUser }) => {
                 <StatusIndicator />
               </Avatar>
               <strong>{message.sender}</strong>
+              <MessageTime>{formatTimestamp(message.timestamp)}</MessageTime>
             </UserInfo>
           ) : null}
           <MessageContent>{message.text}</MessageContent>

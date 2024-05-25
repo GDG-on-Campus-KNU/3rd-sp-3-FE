@@ -1,10 +1,17 @@
 import { User } from "@/features/user/model/types";
 
-interface Message {
+export interface ChatState {
+  messages: Message[];
+  addMessage: (newMessage: Message) => void;
+  setMessages: (messages: Message[]) => void;
+}
+
+export interface Message {
   id: number;
   userId: string;
   sender: string;
   text: string;
+  timestamp: Date;
 }
 
 export interface MessageListProps {

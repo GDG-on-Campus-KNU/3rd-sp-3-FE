@@ -141,3 +141,9 @@ export const SendMessageButton = styled.button`
     background-color: #5e8c83;
   }
 `;
+
+export const MessageTime = styled.span`
+  font-size: 14px;
+  color: rgba(0, 0, 0, 0.5);
+  margin-left: 7px;
+`;
