@@ -20,6 +20,9 @@ dependencies:
   '@liveblocks/yjs':
     specifier: ^1.11.1
     version: 1.11.1(yjs@13.6.14)
+  '@stomp/stompjs':
+    specifier: ^7.0.0
+    version: 7.0.0
   '@tanstack/react-query':
     specifier: ^5.29.0
     version: 5.29.0(react@18.2.0)
@@ -679,6 +682,10 @@ packages:
     os: [win32]
     requiresBuild: true
     optional: true
+
+  /@stomp/stompjs@7.0.0:
+    resolution: {integrity: sha512-fGdq4wPDnSV/KyOsjq4P+zLc8MFWC3lMmP5FBgLWKPJTYcuCbAIrnRGjB7q2jHZdYCOD5vxLuFoKIYLy5/u8Pw==}
+    dev: false
 
   /@swc/core-darwin-arm64@1.4.12:
     resolution: {integrity: sha512-BZUUq91LGJsLI2BQrhYL3yARkcdN4TS3YGNS6aRYUtyeWrGCTKHL90erF2BMU2rEwZLLkOC/U899R4o4oiSHfA==}

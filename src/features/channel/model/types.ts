@@ -1,3 +1,5 @@
+import { Message } from "@/features/chatroom/model/types";
+
 export interface Channel {
   id: string;
   name: string;
@@ -27,7 +29,7 @@ export interface ChannelState {
   channels: Channel[];
   setCurrentChannel: (channel: Channel | null) => void;
   setChannels: (channels: Channel[]) => void;
-  sendMessage: (chatRoomId: string, message: ChatMessage) => void;
+  sendMessage: (chatRoomId: string, message: Message) => void;
 }
 
 export interface Member {
@@ -36,21 +38,15 @@ export interface Member {
   microphoneStatus: "on" | "off";
 }
 
-export interface Document {
-  id: string;
-  title: string;
-}
-
 export interface ChatRoom {
   id: string;
   name: string;
-  messages: ChatMessage[];
+  messages: Message[];
 }
 
-export interface ChatMessage {
-  senderId: string;
-  content: string;
-  timestamp: Date;
+export interface Document {
+  id: string;
+  title: string;
 }
 
 export interface VoiceRoom {

@@ -5,6 +5,7 @@ import { MdOutlineKeyboardDoubleArrowRight } from "react-icons/md";
 import MessageList from "./MessageList";
 import MessageInputArea from "./MessageInputArea";
 import { dummyMessages } from "@/features/chatroom/data/dummyMessages";
+import { client } from "@/features/chatroom/utils/stompClient";
 
 export const ChatroomSpace: React.FC = () => {
   const { currentUser } = useUserStore();
@@ -15,7 +16,10 @@ export const ChatroomSpace: React.FC = () => {
   const sendMessage = (event: React.SyntheticEvent) => {
     event.preventDefault();
     if (message.trim()) {
-      console.log(message);
+      client.publish({
+        destination: "/topic/messages",
+        body: JSON.stringify({ senderId: currentUser?.id, content: message }),
+      });
       setMessage("");
       if (inputRef.current) {
         inputRef.current.style.height = "40px";
