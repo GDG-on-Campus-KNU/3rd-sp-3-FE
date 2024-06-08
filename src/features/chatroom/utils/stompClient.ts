@@ -43,3 +43,25 @@ export function enterChatRoom(channelId: string, userNickname: string) {
     });
   }
 }
+
+export function subscribeToChatRoom(channelId: string) {
+  client.subscribe(`/api/sub/${channelId}`, (message) => {
+    const { addMessage } = useChatStore.getState();
+    const receivedMessage = JSON.parse(message.body);
+    if (receivedMessage.connectionState) {
+      console.log(
+        `User ${receivedMessage.userNickname} has ${
+          receivedMessage.connectionState === "ENTER" ? "entered" : "exited"
+        } the room.`
+      );
+    } else {
+      addMessage({
+        id: receivedMessage.id,
+        userId: receivedMessage.senderId,
+        sender: receivedMessage.senderName,
+        text: receivedMessage.content,
+        timestamp: new Date(receivedMessage.timestamp),
+      });
+    }
+  });
+}

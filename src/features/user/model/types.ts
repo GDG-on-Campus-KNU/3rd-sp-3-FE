@@ -1,4 +1,5 @@
 export interface User {
+  currentChatRoomId: string;
   id: string;
   name: string;
   email: string;
