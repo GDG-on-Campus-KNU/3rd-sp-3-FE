@@ -27,9 +27,10 @@ export interface ItemListProps {
 export interface ChannelState {
   currentChannel: Channel | null;
   channels: Channel[];
+  currentConnectionState: "ENTER" | "EXIT";
   setCurrentChannel: (channel: Channel | null) => void;
   setChannels: (channels: Channel[]) => void;
-  sendMessage: (chatRoomId: string, message: Message) => void;
+  setCurrentConnectionState: (state: "ENTER" | "EXIT") => void;
 }
 
 export interface Member {

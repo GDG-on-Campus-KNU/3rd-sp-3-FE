@@ -15,10 +15,7 @@ export const dummyChannels: Channel[] = [
       { id: "doc2", title: "문서2" },
       { id: "doc3", title: "문서3" },
     ],
-    chatRooms: [
-      { id: "chat1", name: "채팅방1", messages: [] },
-      { id: "chat2", name: "채팅방2", messages: [] },
-    ],
+    chatRooms: [{ id: "chat1", name: "채팅방", messages: [] }],
     voiceRooms: [
       { id: "voice1", name: "회의실1" },
       { id: "voice2", name: "회의실2" },
@@ -36,7 +33,7 @@ export const dummyChannels: Channel[] = [
       { id: "doc1", title: "문서1" },
       { id: "doc2", title: "문서2" },
     ],
-    chatRooms: [{ id: "chat1", name: "채팅방1", messages: [] }],
+    chatRooms: [{ id: "chat1", name: "채팅방", messages: [] }],
     voiceRooms: [
       { id: "voice1", name: "회의실1" },
       { id: "voice2", name: "회의실2" },
@@ -58,10 +55,7 @@ export const dummyChannels: Channel[] = [
       { id: "doc4", title: "문서4" },
       { id: "doc5", title: "문서5" },
     ],
-    chatRooms: [
-      { id: "chat1", name: "채팅방1", messages: [] },
-      { id: "chat2", name: "채팅방2", messages: [] },
-    ],
+    chatRooms: [{ id: "chat1", name: "채팅방", messages: [] }],
     voiceRooms: [
       { id: "voice1", name: "회의실1" },
       { id: "voice2", name: "회의실2" },
@@ -73,7 +67,7 @@ export const dummyChannels: Channel[] = [
     description: "프로젝트 채널 4에 대한 소개입니다.",
     members: [{ id: "m1", name: "사용자1", microphoneStatus: "off" }],
     documents: [{ id: "doc1", title: "문서1" }],
-    chatRooms: [{ id: "chat1", name: "채팅방1", messages: [] }],
+    chatRooms: [{ id: "chat1", name: "채팅방", messages: [] }],
     voiceRooms: [
       { id: "voice1", name: "회의실1" },
       { id: "voice2", name: "회의실2" },
@@ -92,7 +86,7 @@ export const dummyChannels: Channel[] = [
       { id: "doc2", title: "문서2" },
       { id: "doc3", title: "문서3" },
     ],
-    chatRooms: [{ id: "chat1", name: "채팅방1", messages: [] }],
+    chatRooms: [{ id: "chat1", name: "채팅방", messages: [] }],
     voiceRooms: [
       { id: "voice1", name: "회의실1" },
       { id: "voice2", name: "회의실2" },
@@ -113,10 +107,7 @@ export const dummyChannels: Channel[] = [
       { id: "doc2", title: "문서2" },
       { id: "doc3", title: "문서3" },
     ],
-    chatRooms: [
-      { id: "chat1", name: "채팅방1", messages: [] },
-      { id: "chat2", name: "채팅방2", messages: [] },
-    ],
+    chatRooms: [{ id: "chat1", name: "채팅방", messages: [] }],
     voiceRooms: [
       { id: "voice1", name: "회의실1" },
       { id: "voice2", name: "회의실2" },
@@ -138,10 +129,7 @@ export const dummyChannels: Channel[] = [
       { id: "doc2", title: "문서2" },
       { id: "doc3", title: "문서3" },
     ],
-    chatRooms: [
-      { id: "chat1", name: "채팅방1", messages: [] },
-      { id: "chat2", name: "채팅방2", messages: [] },
-    ],
+    chatRooms: [{ id: "chat1", name: "채팅방", messages: [] }],
     voiceRooms: [
       { id: "voice1", name: "회의실1" },
       { id: "voice2", name: "회의실2" },

@@ -2,26 +2,37 @@ import React from "react";
 import useStore from "@/features/channel/model/store";
 import { ItemList } from "@/shared/ui/ItemList/ItemList";
 import { ChatBubbleIcon } from "@/shared/assets/icons/StyledIcon";
-import { enterChatRoom } from "@/features/chatroom/utils/stompClient";
 import { JoinButton } from "@/shared/styles/JoinButton";
+import {
+  enterChatRoom,
+  subscribeToChatRoom,
+} from "@/features/chatroom/utils/stompClient";
 
 export const ChatroomList: React.FC = () => {
-  const { currentChannel } = useStore((state) => ({
+  const { currentChannel, currentConnectionState } = useStore((state) => ({
     currentChannel: state.currentChannel,
+    currentConnectionState: state.currentConnectionState,
   }));
-  const userNickname = "준혁"; // 사용자 닉네임 설정
+  const userNickname = "준혁";
 
-  const handleRoomClick = () => {
+  const handleRoomClick = (roomId: string) => {
     console.log(
-      `Attempting to enter room in channel ${currentChannel?.id} as ${userNickname}`
+      `Attempting to ${
+        currentConnectionState === "ENTER" ? "exit" : "enter"
+      } room ${roomId} in channel ${currentChannel?.id} as ${userNickname}`
     );
     if (currentChannel) {
       enterChatRoom(currentChannel.id, userNickname);
+      if (currentConnectionState === "EXIT") {
+        subscribeToChatRoom(roomId);
+      }
     }
   };
 
-  const renderJoinButton = () => (
-    <JoinButton onClick={() => handleRoomClick()}>참여</JoinButton>
+  const renderJoinButton = (roomId: string) => (
+    <JoinButton onClick={() => handleRoomClick(roomId)}>
+      {currentConnectionState === "ENTER" ? "퇴장" : "참여"}
+    </JoinButton>
   );
 
   return (
@@ -34,7 +45,7 @@ export const ChatroomList: React.FC = () => {
         })) || []
       }
       renderIconBefore={() => <ChatBubbleIcon />}
-      renderIconAfter={() => renderJoinButton()}
+      renderIconAfter={(item) => renderJoinButton(item.id)}
     />
   );
 };
