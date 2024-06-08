@@ -1,5 +1,5 @@
 export interface User {
-  currentChatRoomId: string;
+  currentChatRoomId: string | null;
   id: string;
   name: string;
   email: string;

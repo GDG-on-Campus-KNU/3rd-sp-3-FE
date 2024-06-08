@@ -1,5 +1,5 @@
 import { useEffect } from "react";
-import { fetchUserProfile } from "@/features/api/apiService";
+import { fetchUserProfile } from "@/features/user/api/apiService";
 import { useUserStore } from "@/features/user/model/store";
 
 export const useUserProfile = () => {
@@ -19,7 +19,12 @@ export const useUserProfile = () => {
         // setCurrentUser(null);
 
         // 테스트를 위해 하드코딩으로 사용자 데이터 설정
-        setUser({ id: "1", name: "Junhyeok Chae", email: "cjh4302@gmail.com" });
+        setUser({
+          currentChatRoomId: null,
+          id: "1",
+          name: "Junhyeok Chae",
+          email: "cjh4302@gmail.com",
+        });
       }
     };
 
