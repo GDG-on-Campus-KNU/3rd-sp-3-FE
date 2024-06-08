@@ -5,9 +5,10 @@ import { dummyChannels } from "../dummyChannel";
 const useStore = create<ChannelState>((set) => ({
   currentChannel: null,
   channels: dummyChannels,
+  currentConnectionState: "EXIT",
   setCurrentChannel: (channel) => set({ currentChannel: channel }),
   setChannels: (channels) => set({ channels }),
-  sendMessage: (chatRoomId, message) => {},
+  setCurrentConnectionState: (state) => set({ currentConnectionState: state }),
 }));
 
 export default useStore;
