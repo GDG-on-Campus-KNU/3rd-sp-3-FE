@@ -1,23 +1,34 @@
-import React, { useState, useRef } from "react";
+import React, { useState, useRef, useEffect } from "react";
 import { useUserStore } from "@/features/user/model/store";
 import { ChatroomContainer, ChatroomName, HideButton } from "./styles";
 import { MdOutlineKeyboardDoubleArrowRight } from "react-icons/md";
 import MessageList from "./MessageList";
 import MessageInputArea from "./MessageInputArea";
-import { dummyMessages } from "@/features/chatroom/data/dummyMessages";
-import { client } from "@/features/chatroom/utils/stompClient";
+import {
+  client,
+  subscribeToChatRoom,
+} from "@/features/chatroom/utils/stompClient";
+import { useChatStore } from "@/features/chatroom/model/store";
 
 export const ChatroomSpace: React.FC = () => {
   const { currentUser } = useUserStore();
+  const { messages } = useChatStore();
   const [message, setMessage] = useState<string>("");
   const [isChatroomVisible, setIsChatroomVisible] = useState<boolean>(true);
   const inputRef = useRef<HTMLTextAreaElement>(null);
 
+  useEffect(() => {
+    if (currentUser?.currentChatRoomId) {
+      subscribeToChatRoom(currentUser.currentChatRoomId);
+    }
+  }, [currentUser]);
+
+  // 3. 채팅 전송
   const sendMessage = (event: React.SyntheticEvent) => {
     event.preventDefault();
     if (message.trim()) {
       client.publish({
-        destination: "/topic/messages",
+        destination: `/api/pub/${currentUser?.currentChatRoomId}`,
         body: JSON.stringify({ senderId: currentUser?.id, content: message }),
       });
       setMessage("");
@@ -45,7 +56,7 @@ export const ChatroomSpace: React.FC = () => {
         채팅방
       </ChatroomName>
 
-      <MessageList messages={dummyMessages} currentUser={currentUser} />
+      <MessageList messages={messages} currentUser={currentUser} />
 
       <MessageInputArea
         inputRef={inputRef}
